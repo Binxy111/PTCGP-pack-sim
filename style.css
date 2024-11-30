@@ -111,13 +111,14 @@ button:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    max-width: 150px; 
+    max-width: 160px; 
     width: 100%;
+    margin: 10px;
 }
 
 /* Image styling for the cards */
 .card img {
-    width: 100%;
+    width: 160px;
     max-width: 250px; 
     height: auto;
     border-radius: 10px;
@@ -251,5 +252,66 @@ button:hover {
     }
     .card {
         max-width: 120px; 
+    }
+}
+
+/* ---------------------------------------------------------- */
+/* Second round of mobile improvements */
+
+@media only screen and (max-width:555px) and (min-width:436px) {
+    .card img {
+        width: 130px;
+        height: auto; 
+    }
+    .card {
+        max-width: 130px; 
+        width: 100%;
+        margin: 5px;
+    }
+    
+}
+@media only screen and (max-width:555px) and (min-width:436px) {
+    .card img {
+        width: 130px;
+        height: auto; 
+    }
+    .card {
+        max-width: 130px; 
+        width: 100%;
+        margin: 5px;
+    }
+    
+}
+@media only screen and (max-width:435px) and (min-width:388px) {
+    .card img {
+        width: 120px;
+        height: auto; 
+    }
+    .card {
+        max-width: 120px; 
+        width: 100%;
+        margin: 2px;
+    }
+}
+@media only screen and (max-width:387px) and (min-width:322px) {
+    .card img {
+        width: 100px;
+        height: auto; 
+    }
+    .card {
+        max-width: 100px; 
+        width: 100%;
+        margin: 1px;
+    }
+}
+@media only screen and (max-width:321px) and (min-width:277px) {
+    .card img {
+        width: 85px;
+        height: auto; 
+    }
+    .card {
+        max-width: 85px; 
+        width: 100%;
+        margin: 1px;
     }
 }
