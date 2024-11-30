@@ -162,7 +162,7 @@ function updatePacksOpened() {
 let fourDiamonds = 0;
 
 function updateFourDiamonds() {
-    const fourDiamondText = '♦4:'
+    const fourDiamondText = '4♦:'
     fourDiamonds += 1;  // Increment the counter
     const divText = `${fourDiamondText} ${fourDiamonds}`
     document.getElementById('four-diamonds').innerText = divText;
@@ -171,7 +171,7 @@ function updateFourDiamonds() {
 let oneStar = 0;
 
 function updateOneStar() {
-    const oneStarText = '★1:'
+    const oneStarText = '1★:'
     oneStar += 1;  
     const divText = `${oneStarText} ${oneStar}`
     document.getElementById('one-star').innerText = divText;
@@ -180,7 +180,7 @@ function updateOneStar() {
 let twoStar = 0;
 
 function updateTwoStar() {
-    const twoStarText = '★2:'
+    const twoStarText = '2★:'
     twoStar += 1;  
     const divText = `${twoStarText} ${twoStar}`
     document.getElementById('two-star').innerText = divText;
@@ -189,7 +189,7 @@ function updateTwoStar() {
 let threeStar = 0;
 
 function updateThreeStar() {
-    const threeStarText = '★3:'
+    const threeStarText = '3★:'
     threeStar += 1;  
     const divText = `${threeStarText} ${threeStar}`
     document.getElementById('three-star').innerText = divText;
