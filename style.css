@@ -1,0 +1,214 @@
+/* Reset some basic styles for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Allows scrolling of the entire webpage */
+#scroll-wrapper {
+    height: 100vh;
+    width: 100%; 
+    overflow-y: auto; 
+    padding-top: 20px;
+    padding-bottom: 20px; 
+}
+
+#scroll-wrapper::-webkit-scrollbar {
+    width: 8px; 
+}
+
+#scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: #4b9ad2; 
+    border-radius: 10px;    
+}
+
+#scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: #397cac; 
+}
+
+/* Body and general page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #151d23;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #4b9ad2;
+}
+
+/* Heading styles */
+h1 {
+    margin-bottom: 20px;
+    color: hsl(207, 97%, 87%);
+    font-size: 2em;
+}
+h2 {
+    margin-bottom: 10px;
+    color: hsl(207, 97%, 87%);
+    font-size: 1.5em;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4b9ad2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2; 
+}
+
+button:hover {
+    background-color: #397cac;
+}
+
+/* Card container styling */
+#pack {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: hsl(207, 97%, 87%);;
+}
+
+/* Styling for the container that holds the pack cards */
+#card-container {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+    padding-bottom: 30px;
+}
+
+/* Styling for the container that holds the pack cards */
+#high-rarity-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+    width: 100%;
+    max-width: none;
+}
+
+/* Styling for each card */
+.card {
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    max-width: 150px; 
+    width: 100%;
+}
+
+/* Image styling for the cards */
+.card img {
+    width: 100%;
+    max-width: 250px; 
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block; 
+    margin: 0 auto;
+}
+
+/* Add some spacing between cards */
+.card p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Style the dropdown select element */
+#pack-select {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 8px;
+    margin: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for the dropdown */
+#pack-select:hover {
+    border-color: #888;
+    background-color: #f1f1f1;
+}
+
+/* Focus effect when the dropdown is selected */
+#packSelect:focus {
+    outline: none;
+    border-color: #007BFF;
+    background-color: #e9f7fe;
+}
+
+/* Style the dropdown options */
+#pack-select option {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Hover effect for options */
+#pack-select option:hover {
+    background-color: #f1f1f1;
+}
+
+/* Opened packs counter container */
+#packs-opened-container {
+    font-size: 20px; 
+    font-weight: bold;
+    margin: 10px;
+}
+
+/* Counters for stats */
+#stats-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 20px;
+    font-family: "Hiragino Kaku Gothic Pro", "MS PGothic", arial, helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#four-diamonds {
+    border: hsl(207, 97%, 87%) 2px solid;
+    padding: 4px;
+}
+
+#one-star {
+    border: hsl(207, 97%, 87%) 2px solid;
+    padding: 4px;
+}
+#two-star {
+    border: hsl(207, 97%, 87%) 2px solid;
+    padding: 4px;
+}
+#three-star {
+    border: hsl(207, 97%, 87%) 2px solid;
+    padding: 4px;
+}
+#Crown {
+    border: hsl(207, 97%, 87%) 2px solid;
+    padding: 4px;
+}

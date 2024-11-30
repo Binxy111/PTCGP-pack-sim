@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Pack Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="scroll-wrapper">
+
+    <h1>Pokemon TCG Pocket Booster Pack Simulator</h1>
+
+    <div id="packs-opened-container">
+        Packs opened: <span id="packs-opened">0</span>
+    </div>
+
+    <div id="stats-container">
+        <div id="four-diamonds">♦4: 0</div>
+        <div id="one-star">★1: 0</div>
+        <div id="two-star">★2: 0</div>
+        <div id="three-star">★3: 0</div>
+        <div id="Crown">Crown: 0</div>
+    </div>
+
+    <label for="pack-select">Choose a pack:</label>
+    <select id="pack-select">
+        <option value="charizard">Charizard Pack</option>
+        <option value="mewtwo">Mewtwo Pack</option>
+        <option value="pikachu">Pikachu Pack</option>
+    </select>
+
+    <button id="open-pack-button">Open Pack</button>
+    <div id="card-container"></div>
+
+    <div id="high-rarity-cards"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
