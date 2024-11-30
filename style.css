@@ -212,3 +212,32 @@ button:hover {
     border: hsl(207, 97%, 87%) 2px solid;
     padding: 4px;
 }
+/* Adjust card size for mobile screens */
+@media (max-width: 768px) {
+    #card-container {
+        gap: 2px;
+        padding: 2px;
+        display: flex; 
+        flex-wrap: wrap; 
+    }
+    .card img {
+        width: 100px;
+    }
+    .card {
+        max-width: 150px; 
+    }
+}
+@media (max-width: 480px) {
+    #card-container {
+        gap: 2px;
+        padding: 2px;
+        display: flex; 
+        flex-wrap: wrap; 
+    }
+    .card img {
+        width: 75px;
+    }
+    .card {
+        max-width: 120px; 
+    }
+}
