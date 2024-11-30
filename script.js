@@ -151,6 +151,49 @@ const rarityDistribution = {
     8: [0.0, 0.0004, 0.0016]
 };
 
+// Helper function: Calc est money spent based on packs opened
+function calculateMoneySpent(packsOpened) {
+    const goldNeeded = packsOpened * 6;
+
+    const prices = [
+        { price: 0.99, gold: 5 },
+        { price: 4.99, gold: 26 },
+        { price: 9.99, gold: 57 },
+        { price: 19.99, gold: 120 },
+        { price: 39.99, gold: 250 },
+        { price: 99.99, gold: 690 },
+    ];
+
+    let remainingGold = goldNeeded;
+    let totalCost = 0;
+
+    while (remainingGold > 0) {
+        let counter = 0;
+
+        for (let bundle of prices) {
+            if (bundle.gold < remainingGold) {
+                counter += 1;
+                continue;
+            }
+
+            if (bundle.gold > remainingGold) {
+                const i = counter !== 0 ? counter - 1 : counter;
+                totalCost += prices[i].price;
+                remainingGold -= prices[i].gold;
+                break;
+            }
+
+            if (bundle.gold === remainingGold) {
+                totalCost += prices[counter].price;
+                remainingGold -= prices[counter].gold;
+                break;
+            }
+        }
+    }
+
+    return totalCost.toFixed(2); // Return the result rounded to two decimal places
+}
+
 let packsOpened = 0;  // Initialize the packs opened counter
 
 // Function to update the counter display
@@ -202,6 +245,35 @@ function updateCrown() {
     crown += 1;  
     const divText = `${crownText} ${crown}`
     document.getElementById('Crown').innerText = divText;
+}
+
+let pokeGold = 0;
+
+function updatePokeGold() {
+    const pokeGoldText = 'Poke Gold Used:'
+    pokeGold += 6;  
+    const divText = `${pokeGoldText} ${pokeGold}`
+    document.getElementById('poke-gold').innerText = divText;
+}
+
+let moneySpent = 0;
+
+function updateMoneySpent() {
+
+    moneySpent = calculateMoneySpent(packsOpened)
+
+    const moneySpentText = 'Est Money Spent: $' 
+    const divText = `${moneySpentText} ${moneySpent}`
+    document.getElementById('money-spent').innerText = divText;
+}
+
+let packPoints = 0;
+
+function updatePackPoints() {
+    const packPointsText = 'Pack Points:'
+    packPoints += 5;  
+    const divText = `${packPointsText} ${packPoints}`
+    document.getElementById('pack-points').innerText = divText;
 }
 
 // Helper function: Weighted random choice
@@ -264,8 +336,10 @@ document.getElementById('open-pack-button').addEventListener('click', function()
     const button = document.getElementById('open-pack-button');
     button.style.display = 'inline-block';  // Ensure the button remains visible
 
-    // Update the counter each time the pack is opened
-    updatePacksOpened();
+    updatePacksOpened();  // Update packs opened counter
+    updatePokeGold();  // Update Poke gold counter
+    updateMoneySpent(); // Update money spent counter
+    updatePackPoints();  // Update pack points counter
 
     const pack = openPack();
     const packContainer = document.getElementById('card-container');
