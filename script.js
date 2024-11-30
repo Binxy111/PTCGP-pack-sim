@@ -200,8 +200,8 @@ let crown = 0;
 function updateCrown() {
     const crownText = 'Crown:'
     crown += 1;  
-    const divText = `${crownText} ${crownStar}`
-    document.getElementById('crown').innerText = divText;
+    const divText = `${crownText} ${crown}`
+    document.getElementById('Crown').innerText = divText;
 }
 
 // Helper function: Weighted random choice
