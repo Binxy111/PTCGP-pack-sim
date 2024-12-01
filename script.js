@@ -357,6 +357,11 @@ document.getElementById('open-pack-button').addEventListener('click', function()
         const image = document.createElement("img");
         image.src = `./src/images/A1_${formattedDex}_EN.jpeg`;  // Adjust the image path to use the formatted dex number
         image.alt = name;
+        
+        // Add a click event listener to open the modal when the card is clicked
+        image.addEventListener("click", function () {
+            openModal(image.src); // Open the modal with the clicked card's image
+        });
     
         cardDiv.appendChild(image);
         packContainer.appendChild(cardDiv);
@@ -372,6 +377,11 @@ document.getElementById('open-pack-button').addEventListener('click', function()
             const image = document.createElement("img");
             image.src = `./src/images/A1_${formattedDex}_EN.jpeg`;
             image.alt = name;
+
+            // Add a click event listener to open the modal for rare cards
+            image.addEventListener("click", function () {
+                openModal(image.src); // Open the modal with the rare card's image
+            });
         
             rareCardDiv.appendChild(image);
             rarePackContainer.appendChild(rareCardDiv);
@@ -442,3 +452,25 @@ document.getElementById("sort-pack-button").addEventListener("click", () => {
         packContainer.appendChild(cardDiv);
     });
 });
+
+// Function to open the modal with the image
+function openModal(imageSrc) {
+    const modal = document.getElementById("card-modal");
+    const modalImage = document.getElementById("modal-image");
+
+    modal.style.display = "block"; // Show the modal
+    modalImage.src = imageSrc; // Set the source of the modal image
+
+    // Add event listener to close the modal when the user clicks on the close button
+    const closeBtn = document.querySelector(".close");
+    closeBtn.onclick = function () {
+        modal.style.display = "none"; // Hide the modal when clicked
+    };
+
+    // Close modal when clicking outside the image
+    modal.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+}
