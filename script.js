@@ -384,6 +384,24 @@ document.getElementById('open-pack-button').addEventListener('click', function()
                 h2Added = true; // Set the flag to true so the H2 is not added again
             }
         }
+        // Check if the stats container already exists
+        if (!document.getElementById('stats-container')) {
+            // Create a div element for the stats container
+            const statsContainer = document.createElement('div');
+            statsContainer.id = 'stats-container';
+            // Define the inner HTML structure
+            statsContainer.innerHTML = `
+                <div id="four-diamonds">4♦: 0</div>
+                <div id="one-star">1★: 0</div>
+                <div id="two-star">2★: 0</div>
+                <div id="three-star">3★: 0</div>
+                <div id="Crown">Crown: 0</div>
+            `;
+            // Get the card-container div
+            const cardContainer = document.getElementById('card-container');
+            // Insert the stats container after the card-container div
+            cardContainer.parentNode.insertBefore(statsContainer, cardContainer.nextSibling);
+        }
         if (rarity == 4) {
             updateFourDiamonds()
         }
