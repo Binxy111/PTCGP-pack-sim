@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booster Pack Simulator</title>
+    <meta name="description" content="A booster pack opening simulator for Pokemon TCG Pocket.">
+    <meta name="keywords" content="Pokemon, TCG, Pocket, Booster, Pack, Simulator">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Pokemon Pocket Booster Pack Simulator">
+    <meta property="og:description" content="A booster pack opening simulator for Pokemon TCG Pocket.">
+<!--     <meta property="og:image" content="https://example.com/path-to-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website"> -->
+    <!-- Favicon and Theme Colors -->
+<!--     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/path-to-touch-icon.png">
+    <meta name="theme-color" content="#CCC"> -->
+    <title>Pokemon Pocket Booster Pack Simulator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,18 +23,6 @@
     <div id="scroll-wrapper">
 
     <h1>Pokemon TCG Pocket Booster Pack Simulator</h1>
-
-    <div id="packs-opened-container">
-        Packs opened: <span id="packs-opened">0</span>
-    </div>
-
-    <div id="stats-container">
-        <div id="four-diamonds">4♦: 0</div>
-        <div id="one-star">1★: 0</div>
-        <div id="two-star">2★: 0</div>
-        <div id="three-star">3★: 0</div>
-        <div id="Crown">Crown: 0</div>
-    </div>
 
     <div id="game-stats-container">
         <div id="poke-gold">Poke Gold Used: 0</div>
@@ -38,6 +38,11 @@
     </select>
 
     <button id="open-pack-button">Open Pack</button>
+
+    <div id="packs-opened-container">
+        Packs opened: <span id="packs-opened">0</span>
+    </div>
+        
     <div id="card-container"></div>
 
     <div id="high-rarity-cards"></div>
