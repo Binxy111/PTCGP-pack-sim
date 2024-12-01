@@ -127,6 +127,7 @@ button:hover {
     margin: 0 auto;
     transition: all 0.3s ease; 
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 .card img:hover {
     box-shadow: 0 0 10px 5px rgba(166, 219, 255, 0.8); 
