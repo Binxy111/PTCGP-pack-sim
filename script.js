@@ -138,6 +138,52 @@ const pikachuPack = {
         [284, "Charizard EX"], [285, "Pikachu EX"], [286, "Mewtwo EX"]
     ]
 };
+const baseSetPack = {
+    1: [
+        [11, "Oddish"], [18, "Bellsprout"], [21, "Exeggcute"], [24, "Tangela"], [27, "Cottonee"],
+        [29, "Petilil"], [31, "Skiddo"], [32, "Gogoat"], [33, "Charmander"], [37, "Vulpix"],
+        [42, "Ponyta"], [44, "Magmar"], [48, "Heatmor"], [51, "Sizzlipede"], [57, "Psyduck"],
+        [59, "Poliwag"], [74, "Staryu"], [85, "Ducklett"], [87, "Froakie"], [90, "Pyukumuku"],
+        [92, "Snom"], [105, "Blitzle"], [110, "Helioptile"], [111, "Heliolisk"], [115, "Abra"],
+        [118, "Slowpoke"], [133, "Woobat"], [134, "Swoobat"], [135, "Golett"], [137, "Sandshrew"],
+        [141, "Mankey"], [143, "Machop"], [155, "Hitmonchan"], [162, "Clobbopus"], [164, "Ekans"],
+        [178, "Mawile"], [179, "Pawniard"], [181, "Meltan"], [189, "Rattata"], [190, "Raticate"],
+        [191, "Spearow"], [192, "Fearow"], [196, "Meowth"], [198, "Farfetch'd"], [199, "Doduo"],
+        [206, "Eevee"], [212, "Minccino"], [214, "Wooloo"], [215, "Dubwool"], [217, "Dome Fossil"]
+    ],
+    2: [
+        [12, "Gloom"], [19, "Weepinbell"], [26, "Pinsir"], [28, "Whimsicott"], [30, "Lilligant"],
+        [34, "Charmeleon"], [38, "Ninetales"], [43, "Rapidash"], [52, "Centiskorch"], [58, "Golduck"],
+        [60, "Poliwhirl"], [75, "Starmie"], [86, "Swanna"], [88, "Frogadier"], [91, "Bruxish"],
+        [93, "Frosmoth"], [106, "Zebstrika"], [112, "Pincurchin"], [116, "Kadabra"], [119, "Slowbro"],
+        [136, "Golurk"], [138, "Sandslash"], [142, "Primeape"], [144, "Machoke"], [158, "Kabuto"],
+        [163, "Grapploct"], [165, "Arbok"], [180, "Bisharp"], [197, "Persian"], [200, "Dodrio"],
+        [204, "Tauros"], [213, "Cinccino"], [219, "Erika"], [221, "Blaine"], [225, "Sabrina"]
+    ],
+    3: [
+        [13, "Vileplume"], [20, "Victreebel"], [22, "Exeggutor"], [35, "Charizard"], [45, "Flareon"],
+        [46, "Moltres"], [61, "Poliwrath"], [79, "Lapras"], [89, "Greninja"], [117, "Alakazam"],
+        [145, "Machamp"], [159, "Kabutops"], [182, "Melmetal"], [203, "Kangaskhan"]
+    ],
+    4: [
+        [23, "Exeggutor EX"], [36, "Charizard EX"], [47, "Moltres EX"], [76, "Starmie EX"], [146, "Machamp EX"]
+    ],
+    5: [
+        [228, "Gloom"], [229, "Pinsir"], [230, "Charmander"], [231, "Rapidash"], [234, "Lapras"],
+        [236, "Alakazam"], [237, "Slowpoke"], [246, "Meowth"]
+    ],
+    6: [
+        [252, "Venasaur"], [253, "Charizard"], [255, "Blastoise"], [257, "Starmie EX"], 
+        [263, "Machamp EX"], [266, "Erika"], [268, "Blaine"], [272, "Sabrina"], [274, "Moltres EX"], 
+        [278, "Machamp EX"]
+    ],
+    7: [
+        [280, "Charizard"]
+    ],
+    8: [
+        [284, "Charizard EX"], [285, "Pikachu EX"], [286, "Mewtwo EX"]
+    ]
+};
 
 // Rarity distribution
 const rarityDistribution = {
